@@ -10,7 +10,11 @@ const Navbar = () => {
       direction="row"
       justifyContent="space-around"
       alignItems="center"
-      sx={{ gap: { sm: '123px', xs: '40px' }, mt: { sm: '32px', xs: '20px' }, justifyContent: 'none' }}
+      sx={{
+        gap: { sm: "123px", xs: "40px" },
+        mt: { sm: "32px", xs: "20px" },
+        justifyContent: "none",
+      }}
       px="20px"
     >
       <Link to="/">
@@ -22,6 +26,7 @@ const Navbar = () => {
       </Link>
       <Stack
         direction="row"
+        // spacing={4}
         gap="40px"
         fontFamily="Alegreya"
         fontSize="24px"
@@ -39,9 +44,10 @@ const Navbar = () => {
         </Link>
         <Link
           to="/exercise"
-          style={{ 
-            textDecoration: "none", 
-            color: "#3A1212" }}
+          style={{
+            textDecoration: "none",
+            color: "#3A1212",
+          }}
         >
           Exercise
         </Link>
