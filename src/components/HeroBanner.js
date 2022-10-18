@@ -19,8 +19,7 @@ const HeroBanner = () => {
         mb="23px"
         mt="30px"
       >
-        Sweat, Smile <br />
-        And Repeat
+        Sweat, Smile <br /> and Repeat
       </Typography>
       <Typography
         fontSize="22px"
@@ -49,16 +48,9 @@ const HeroBanner = () => {
       >
         Exercise
       </Typography>
-      <img
-        src={HeroBannerImage}
-        alt="banner"
-        className="hero-banner"
-        
-      />
+      <img src={HeroBannerImage} alt="banner" className="hero-banner" />
     </Box>
   );
 };
 
 export default HeroBanner;
-
-

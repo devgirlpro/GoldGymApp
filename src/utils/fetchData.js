@@ -1,10 +1,9 @@
 //exerciseOption getting from RapidApi
-//key in in .env file
+//key is in .env file
 export const exerciseOptions = {
   method: "GET",
-  // url: "https://exercisedb.p.rapidapi.com/exercises/bodyPart/back",
   headers: {
-    "X-RapidAPI-Key": "b0f477993dmsh21ab40918948518p16575fjsn91f4cd432178",
+    "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
@@ -12,7 +11,7 @@ export const exerciseOptions = {
 //fetching API
 export const fetchData = async (url, options) => {
   const response = await fetch(url, options);
-  const data = response.json();
+  const data = await response.json();
 
   return data;
 };

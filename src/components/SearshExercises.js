@@ -17,38 +17,38 @@ const SearshExercises = () => {
   //     setBodyParts(["all", ...bodyPartsData]);
   //   }, []);
 
-  useEffect(() => {
-    const fetchExercisesData = async () => {
-      const bodyPartsData = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
-        exerciseOptions
-      );
-      console.log("bodyPartsData ==>", bodyPartsData);
-      setBodyParts(["all", ...bodyPartsData]);
-    };
-    fetchExercisesData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchExercisesData = async () => {
+  //     const bodyPartsData = await fetchData(
+  //       "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
+  //       exerciseOptions
+  //     );
+  //     console.log("bodyPartsData ==>", bodyPartsData);
+  //     setBodyParts(["all", ...bodyPartsData]);
+  //   };
+  //   fetchExercisesData();
+  // }, []);
 
   //using fetched api from Rapid api
   const handleSearch = async () => {
     if (search) {
       const exercisesData = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises",
+        "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
         exerciseOptions
       );
 
-      const searchExercises = exercisesData.filter((exercise) => {
-        return (
-          exercise.name.toLowerCase().includes(search) ||
-          exercise.target.toLowerCase().includes(search) ||
-          exercise.equipment.toLowerCase().includes(search) ||
-          exercise.bodyPart.toLowerCase().includes(search)
-        );
-      });
-      console.log(searchExercises);
+      // const searchExercises = exercisesData.filter((exercise) => {
+      //   return (
+      //     exercise.name.toLowerCase().includes(search) ||
+      //     exercise.target.toLowerCase().includes(search) ||
+      //     exercise.equipment.toLowerCase().includes(search) ||
+      //     exercise.bodyPart.toLowerCase().includes(search)
+      //   );
+      // });
+      console.log(exercisesData);
 
-      setSearch("");
-      setExercises(searchExercises);
+      // setSearch("");
+      // setExercises(searchExercises);
     }
   };
 
